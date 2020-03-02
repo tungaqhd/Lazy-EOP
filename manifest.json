@@ -1,7 +1,7 @@
 {
   "name": "Lazy EOP",
   "description": "Extension hỗ trợ bạn làm bài tập EOP nhanh hơn ;)",
-  "version": "1.0",
+  "version": "1.0.2",
   "browser_action": {
     "default_icon": "assets/img/icon_16.png",
     "default_popup": "popup.html"
