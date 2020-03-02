@@ -1,0 +1,33 @@
+{
+  "name": "Lazy EOP",
+  "description": "Extension hỗ trợ bạn làm bài tập EOP nhanh hơn ;)",
+  "version": "1.0",
+  "browser_action": {
+    "default_icon": "assets/img/icon_16.png",
+    "default_popup": "popup.html"
+  },
+  "icons": {
+     "128": "assets/img/icon_128.png",
+     "16": "assets/img/icon_16.png",
+     "32": "assets/img/icon_32.png"
+  },
+  "background": {
+    "scripts": ["scripts/background.js"],
+    "persistent": false
+  },
+  "permissions": ["tabs", "*://eop.edu.vn/*"],
+  "content_scripts": [
+    {
+      "matches": ["*://eop.edu.vn/study/task/*"],
+      "js": ["scripts/jquery.min.js", "scripts/contentscript.js"],
+      "run_at": "document_idle",
+      "all_frames": false
+    }
+  ],
+  "web_accessible_resources": [
+    "scripts/jquery.min.js",
+    "scripts/eop.js",
+    "scripts/menu/eop-lazy-styles.css"
+  ],
+  "manifest_version": 2
+}
