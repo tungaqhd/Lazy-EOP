@@ -57,7 +57,7 @@ const autoFill = async () => {
   answers.click();
   submitButton.click();
 
-  await doAfter(() => viewAnswerButoon.click(), 3000);
+  await doAfter(() => viewAnswerButoon.click(), 30000);
   await doAfter(() => console.log("waitting"), 3500);
 
   answers = $(".ques > div > p > div > ins");
